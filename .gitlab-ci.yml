@@ -1,0 +1,15 @@
+variables:
+  SONAR_HOST_URL: "https://sonarqube.centene.com/"
+  SONAR_PROJECT_KEY: "Harmoney-PaymentAPI"
+  SONAR_PYTHON_VERSION: "3.9"
+ 
+stages:          # List of stages for jobs, and their order of execution
+  - Code Analysis
+ 
+Sonar Scan:
+  stage: Code Analysis
+  image: $DOCKERHUB_PROXY/sonarsource/sonar-scanner-cli:latest
+ 
+  script:
+    - sonar-scanner  -Dsonar.host.uar=${SONAR_GBL_URL} -Dsonar.login=${SONAR_GBL_TOKEN} -Dsonar.projectKey=${SONAR_PROJECT_KEY} -Dsonar.python.version=${SONAR_PYTHON_VERSION}
+ 
