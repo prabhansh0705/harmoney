@@ -35,10 +35,10 @@ class CncUmvV3Client:
     """
 
     def __init__(self) -> None:
-        self.api_key = os.environ.get('CNC_UMV_V3_API_KEY')
-        self.host = os.environ.get('CNC_UMV_V3_HOST')
-        self.base_path = os.environ.get('CNC_UMV_V3_BASE_PATH')
-        self.version = os.environ.get('CNC_UMV_V3_VERSION')
+        self.api_key = "eqeqweqw"
+        self.host = "eqweqweqw"
+        self.base_path = "eqeqweqw"
+        self.version = "eqeqweqwe"
 
         if not self.api_key:
             raise MissingAuthTokenException(
